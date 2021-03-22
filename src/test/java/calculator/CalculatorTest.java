@@ -44,5 +44,12 @@ public class CalculatorTest {
         assertEquals(expected, calculator.add(input));
     }
 
+    //Step 3
+    @Test
+    @DisplayName("Adding with new lines")
+    void addingWithNewLines() {
+        assertEquals(6, calculator.add("1\n2,3"));
+    }
+
 
 }
