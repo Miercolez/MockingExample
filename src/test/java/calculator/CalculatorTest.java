@@ -69,5 +69,12 @@ public class CalculatorTest {
         assertEquals("negatives not allowed -4 -5", illegalArgumentException.getMessage());
     }
 
+    //Step 6
+    @Test
+    @DisplayName("Excluding numbers bigger than 1000")
+    void excludingNumbersBiggerThan1000() {
+        assertEquals(4, calculator.add("1,1001,3,2005"));
+    }
+
 
 }

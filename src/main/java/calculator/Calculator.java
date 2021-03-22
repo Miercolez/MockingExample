@@ -10,13 +10,14 @@ public class Calculator {
 
         arrayNumbers = numbers.split("[\n,;/]");
 
-        for (String arrayNumber : arrayNumbers) {
-            if (!arrayNumber.isEmpty()) {
-                addingNumbers += Integer.parseInt(arrayNumber);
+        for (String number : arrayNumbers) {
 
-                if (Integer.parseInt(arrayNumber) < 0) {
+            if (!number.isEmpty() && Integer.parseInt(number) <= 1000) {
+                addingNumbers += Integer.parseInt(number);
+
+                if (Integer.parseInt(number) < 0) {
                     illegalException = true;
-                    negativeNumbers.append(" ").append(arrayNumber);
+                    negativeNumbers.append(" ").append(number);
                 }
             }
         }
