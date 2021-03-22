@@ -76,5 +76,12 @@ public class CalculatorTest {
         assertEquals(4, calculator.add("1,1001,3,2005"));
     }
 
+    //Step 7
+    @Test
+    @DisplayName("Delimeters of any length")
+    void delimetersOfAnyLength() {
+        assertEquals(6, calculator.add("//[***]\n1***2***3"));
+    }
+
 
 }
