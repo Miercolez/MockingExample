@@ -90,5 +90,12 @@ public class CalculatorTest {
         assertEquals(6, calculator.add("//[*]\n[%]\n1*2%3"));
     }
 
+    //Step 9
+    @Test
+    @DisplayName("Multiple delimeters with length")
+    void multipleDelimetersWithLength() {
+        assertEquals(10, calculator.add("1,,,,,,/////;;;,,2%%%%%;;;;3**\n\n4"));
+    }
+
 
 }
